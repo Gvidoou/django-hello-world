@@ -15,4 +15,4 @@ class PersonView(ListView):
     Viwing person data on page
     """
     model = Person
-    template_name = "main_page.html"
+    template_name = "home.html"
