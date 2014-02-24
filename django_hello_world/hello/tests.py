@@ -10,7 +10,6 @@ from django.test import TestCase
 from django.test.client import Client
 
 
-
 class SimpleTest(TestCase):
     def test_basic_addition(self):
         """
@@ -24,4 +23,4 @@ class HttpTest(TestCase):
         c = Client()
         response = c.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, 'Hello!')
+        self.assertContains(response, '42 Coffee Cups Test Assignment')
