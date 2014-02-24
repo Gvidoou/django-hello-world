@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}
+42 Coffee Cups Test Assignment
+{% endblock %}
+{% block content %}
+<div class="container">
+
+<h2>42 Coffee Cups Test Assignment</h2>
+
+
+    {% for person in object_list %}
+        <div class="row">
+            <div class="col-xs-5 col-md-6">
+                <ul class="list-unstyled">
+                    <li>Name: {{ person.name }}</li>
+                    <li>Last name: {{ person.surname }}</li>
+                    <li>Date of birth: {{ person.birth_date }}</li>
+                </ul>
+            </div>
+            <div class="col-xs-5 col-md-6">
+                <ul class="list-unstyled">
+                    <li>Contacts</li>
+                    <li>Email: {{ person.email }}</li>
+                    <li>Jabber: {{ person.jabber }}</li>
+                    <li>Skype: {{ person.skype }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5 col-md-6">
+                <p>Bio: {{ person.biography }}</p>
+            </div>
+            <div class="col-xs-5 col-md-6">
+                <p>Other contacts: {{ person.other_contacts }}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+
+</div>
+{% endblock %}
